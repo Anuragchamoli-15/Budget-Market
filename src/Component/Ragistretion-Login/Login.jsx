@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { use, useState } from "react";
 
 function Login(){
 
@@ -12,11 +12,18 @@ function Login(){
         setpass(e.target.value)
     }
     
+    let userinfo = {
+        name: "Anurag",
+        password: "151515"
+    }
+    const [currntloginfo, setloginfo] = useState({})
     const loghandle = (e)=>{
         e.preventDefault()
-        console.log(currntlogid)
-        console.log(currntpass)
 
+        if(userinfo.name === currntlogid && userinfo.password === currntpass){
+            console.log("ok")
+        }
+        setloginfo({currntlogid, currntpass}) 
     }
 
     return(
@@ -24,7 +31,8 @@ function Login(){
             <input type="text" name="" id="" placeholder="enter your email/username/Phone number" onChange={userid}/>
             <input type="text" name="" id="" placeholder="enter your Password" onChange={userpass} />
             <button>Login</button>
-            <p>don't have a account <a href="#">Sing up</a></p>
+            <p>don't have a account <a href="/">Sing up</a></p>
+            <p>{currntlogid.value === userinfo.name? "succes": null}</p>
         </form>
     )
 }
