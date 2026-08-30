@@ -58,7 +58,7 @@ function Ragistretion() {
         <input type="password" name="" id="" placeholder="Enter your Paaword" onChange={Paas}/>
         <p>{currntpass.length <= 8 ? "password shoud be 8 charecters":null}</p>
         <button type="submit">Submit</button>
-        <p>Have a account <a href="login">Login</a></p>
+        <p>Have a account <a href="loginPage">Login</a></p>
     </form>
   );
 }
