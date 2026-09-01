@@ -1,7 +1,42 @@
+.hercontainer{
+    margin-top: 20px;
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    background-color: blue;
+    overflow: hidden;
+}
+
+@keyframes flow{
+    0%{transform: translatex(0%);}
+    20%{
+        transform: translateX(-0%);
+    }
+    25%{ transform: translatex(-100%);}
+    45%{transform: translateX(-100%);}
+
+    50%{transform: translateX(-200%);}
+    70%{
+        transform: translateX(-200%);
+    }
+    75%{ transform: translateX(-300%);}
+    95%{
+        transform: translateX(-300%);
+    }
+    100%{
+        transform: translatex(-400%);
+    }
+    
+}
+
 .herocard{
-    height: 50vh;
+    flex-shrink: 0;
+    overflow: hidden;
+    height: 90%;
+    width: 100%;
     border: 1px solid black;
     background-color: red;
     padding: 10px 20px;
-
+    animation: flow 15s ease-in infinite;
+    
 }
