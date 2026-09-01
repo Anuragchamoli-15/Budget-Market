@@ -1,11 +1,17 @@
 import './App.css'
-import Ragistretion from './Component/Ragistretion-Login/Ragistretion'
+import Login from './Component/Ragistretion-Login/Login.jsx';
+import Home from './Component/Features/Home.jsx'
+import { useState } from 'react';
+
 
 function App() {
 
+  const [log , setlog] = useState("notlog")
+
   return (
     <>
-    <Ragistretion></Ragistretion>
+    {log === "log"?<Home></Home> :<Login setlog = {setlog}></Login> }
+   
     </>
   )
 }

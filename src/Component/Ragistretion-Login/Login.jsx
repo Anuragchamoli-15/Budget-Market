@@ -1,36 +1,36 @@
-import { use, useState } from "react";
+import {  useState } from "react";
 
-function Login() {
+function Login({setlog}) {
   const [currntlogid, setlogid] = useState("");
   const [currntpass, setpass] = useState("");
-
+  
   const userid = (e) => {
     setlogid(e.target.value);
   };
   const userpass = (e) => {
     setpass(e.target.value);
   };
-
+  
   let userinfo = {
     name: "Anurag",
     password: "151515",
   };
+
   const [submitted, setSubmitted] = useState(false);
   const [currntloginfo, setloginfo] = useState({});
-
- 
+  
+  
   const loghandle = (e) => {
     e.preventDefault();
 
-    if (userinfo.name === currntlogid && userinfo.password === currntpass) {
-      console.log("ok");
-    } else {
-      console.log("no");
+    if(currntlogid === userinfo.name && currntpass === userinfo.password){
+      setlog("log")
     }
+
     setSubmitted(true)
     setloginfo({ currntlogid, currntpass });
-
   };
+  
 
   return (
     <form onSubmit={loghandle}>
@@ -53,13 +53,12 @@ function Login() {
         currntlogid !== "" &&
           currntpass !== "" &&
           ( userinfo.name !== currntlogid || userinfo.password !== currntpass) &&
-          "Id not found"}
+          "user not found"}
       </p>
       <button>Login</button>
       <p>
-        don't have a account <a href="/">Sing up</a>
+        don't have a account <a href="ragister">Sing up</a>
       </p>
-      <p>{currntlogid.value === userinfo.name ? "succes" : null}</p>
     </form>
   );
 }

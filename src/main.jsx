@@ -4,11 +4,11 @@ import { createBrowserRouter } from 'react-router-dom';
 import { RouterProvider } from 'react-router-dom';
 import App from "./App.jsx";
 
-import Login from './Component/Ragistretion-Login/Login.jsx';
+import Ragistretion from './Component/Ragistretion-Login/Ragistretion.jsx';
 
 const router = createBrowserRouter([
   {path: "/", element: <App/>},
-  {path: "loginPage", element: <Login/>}
+  {path: "ragister", element: <Ragistretion/>}
 ])
 
  createRoot(document.getElementById("root")).render(

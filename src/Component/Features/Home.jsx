@@ -1,7 +1,12 @@
+import Herocards from "../Carts/Herocards";
+
 function Home(){
     return(<>
     
     <main>
+        <Herocards></Herocards>
+
+
         <section className="Tranding deals">
         <div className="Hero cart">
             <div></div>
