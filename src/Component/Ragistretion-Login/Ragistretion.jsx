@@ -1,4 +1,5 @@
 import { useState } from "react";
+import style from "./Style.module.css"
 
 function Ragistretion() {
   const user = {
@@ -42,7 +43,8 @@ function Ragistretion() {
 
 
   return (
-    <form onSubmit={handelbtn}>
+    <form onSubmit={handelbtn}
+    className={style.ragistretionForm}>
 
 
         <input
@@ -52,11 +54,12 @@ function Ragistretion() {
           placeholder="Enter your name"
           onChange={Name}
           value={currntName}
+          className={style.ragisInp}
         />
-        <input type="email" name="" id="" placeholder="Enter your email" onChange={Emai} />
-        <input type="tel" name="" id="" placeholder="Enter your Phone Number" onChange={Phon}/>
-        <input type="password" name="" id="" placeholder="Enter your Paaword" onChange={Paas}/>
-        <p>{currntpass.length <= 8 ? "password shoud be 8 charecters":null}</p>
+        <input type="email" name="" id="" placeholder="Enter your email" onChange={Emai}  className={style.ragisInp}/>
+        <input type="tel" name="" id="" placeholder="Enter your Phone Number" onChange={Phon}  className={style.ragisInp}/>
+        <input type="password" name="" id="" placeholder="Enter your Paaword" onChange={Paas} className={style.ragisInp}/>
+        <p className={style.ragiInfo}>{currntpass.length <= 8 ? "password shoud be 8 charecters":null} </p>
         <button type="submit">Submit</button>
         <p>Have a account <a href="/">Login</a></p>
     </form>

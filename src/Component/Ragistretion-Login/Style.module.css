@@ -1,0 +1,469 @@
+/* =========================
+   LOGIN FORM
+========================= */
+
+.loginForm {
+    width: min(420px, 92%);
+    margin: 80px auto;
+    padding: 42px 36px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    background: rgba(255, 255, 255, 0.055);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Top premium glow */
+
+.loginForm::before {
+    content: "";
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    top: -100px;
+    right: -70px;
+
+    background: rgba(212, 175, 55, 0.18);
+    border-radius: 50%;
+
+    filter: blur(35px);
+    pointer-events: none;
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+.logInp {
+    width: 100%;
+    height: 52px;
+
+    padding: 0 16px;
+
+    box-sizing: border-box;
+
+    background: rgba(0, 0, 0, 0.25);
+    color: #f5f1e8;
+
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    border-radius: 11px;
+
+    outline: none;
+
+    font-size: 15px;
+    letter-spacing: 0.2px;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+/* Placeholder */
+
+.logInp::placeholder {
+    color: rgba(255, 255, 255, 0.42);
+}
+
+
+/* Input focus */
+
+.logInp:focus {
+    background: rgba(0, 0, 0, 0.38);
+
+    border-color: #d4af37;
+
+    box-shadow:
+        0 0 0 3px rgba(212, 175, 55, 0.10),
+        0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================
+   ERROR MESSAGE
+========================= */
+
+.logErroInfo {
+    min-height: 20px;
+
+    margin: -5px 2px 0;
+
+    color: #ff6b6b;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    letter-spacing: 0.2px;
+}
+
+
+/* =========================
+   LOGIN BUTTON
+========================= */
+
+.logBtn {
+    width: 100%;
+    height: 52px;
+
+    margin-top: 2px;
+
+    border: none;
+    border-radius: 11px;
+
+    background: linear-gradient(
+        135deg,
+        #d4af37,
+        #f0d77a,
+        #b88a16
+    );
+
+    color: #17130b;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px rgba(212, 175, 55, 0.20);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        filter 0.2s ease;
+}
+
+
+.logBtn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 30px rgba(212, 175, 55, 0.30);
+
+    filter: brightness(1.05);
+}
+
+
+.logBtn:active {
+    transform: translateY(0);
+}
+
+
+/* =========================
+   SIGN UP TEXT
+========================= */
+
+.loginForm > p:last-child {
+    margin: 4px 0 0;
+
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 13px;
+}
+
+
+/* Sign up link */
+
+.loginForm > p:last-child a {
+    margin-left: 5px;
+
+    color: #d4af37;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: color 0.2s ease;
+}
+
+
+.loginForm > p:last-child a:hover {
+    color: #f0d77a;
+    text-decoration: underline;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    .loginForm {
+        width: 88%;
+        padding: 32px 22px;
+        margin: 50px auto;
+        border-radius: 16px;
+    }
+
+    .logInp,
+    .logBtn {
+        height: 50px;
+    }
+
+    .loginForm > p:last-child {
+        font-size: 12px;
+    }
+}
+
+
+
+/* =========================
+   REGISTRATION FORM
+========================= */
+
+.ragistretionForm {
+    width: min(440px, 92%);
+    margin: 60px auto;
+    padding: 42px 36px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    box-sizing: border-box;
+
+    background: rgba(255, 255, 255, 0.055);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Premium golden glow */
+
+.ragistretionForm::before {
+    content: "";
+
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    top: -110px;
+    right: -70px;
+
+    background: rgba(212, 175, 55, 0.18);
+
+    border-radius: 50%;
+
+    filter: blur(40px);
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+.ragisInp {
+    width: 100%;
+    height: 52px;
+
+    padding: 0 16px;
+
+    box-sizing: border-box;
+
+    background: rgba(0, 0, 0, 0.25);
+
+    color: #f5f1e8;
+
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    border-radius: 11px;
+
+    outline: none;
+
+    font-size: 15px;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+/* Placeholder */
+
+.ragisInp::placeholder {
+    color: rgba(255, 255, 255, 0.42);
+}
+
+
+/* Focus */
+
+.ragisInp:focus {
+    background: rgba(0, 0, 0, 0.38);
+
+    border-color: #d4af37;
+
+    box-shadow:
+        0 0 0 3px rgba(212, 175, 55, 0.10),
+        0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================
+   PASSWORD INFO
+========================= */
+
+.ragiInfo {
+    min-height: 18px;
+
+    margin: -7px 2px 0;
+
+    color: #ff6b6b;
+
+    font-size: 12px;
+
+    letter-spacing: 0.2px;
+}
+
+
+/* =========================
+   SUBMIT BUTTON
+========================= */
+
+.ragistretionForm > button {
+    width: 100%;
+    height: 52px;
+
+    margin-top: 2px;
+
+    border: none;
+    border-radius: 11px;
+
+    background: linear-gradient(
+        135deg,
+        #d4af37,
+        #f0d77a,
+        #b88a16
+    );
+
+    color: #17130b;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px rgba(212, 175, 55, 0.20);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        filter 0.2s ease;
+}
+
+
+.ragistretionForm > button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 30px rgba(212, 175, 55, 0.30);
+
+    filter: brightness(1.05);
+}
+
+
+.ragistretionForm > button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================
+   LOGIN TEXT
+========================= */
+
+.ragistretionForm > p:last-child {
+    margin: 4px 0 0;
+
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 13px;
+}
+
+
+/* Login link */
+
+.ragistretionForm > p:last-child a {
+    margin-left: 5px;
+
+    color: #d4af37;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: color 0.2s ease;
+}
+
+
+.ragistretionForm > p:last-child a:hover {
+    color: #f0d77a;
+
+    text-decoration: underline;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    .ragistretionForm {
+        width: 88%;
+
+        padding: 32px 22px;
+
+        margin: 45px auto;
+
+        border-radius: 16px;
+    }
+
+    .ragisInp,
+    .ragistretionForm > button {
+        height: 50px;
+    }
+
+    .ragistretionForm > p:last-child {
+        font-size: 12px;
+    }
+}

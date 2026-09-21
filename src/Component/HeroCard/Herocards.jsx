@@ -1,12 +1,11 @@
-import style from './Herocards.module.css'
+import style from './Herocard.module.css'
+import mansoonImg from "../../assets/masoonOffer.jpeg";
+
 
 function Herocards(){
     return(<>
     <div className={style.hercontainer}>
 
-    <div className={style.herocard}>
-        <h2>Flat 40% of in thi moonsoon season</h2>
-    </div>
 
     <div className={style.herocard}>
         <h2>Big deal in this month</h2>
@@ -24,9 +23,11 @@ function Herocards(){
         <p>buy now</p>
     </div>
 
-     <div className={style.herocard}>
+    <div className={style.herocard}>
+        <img src={mansoonImg} alt="" />
         <h2>Flat 40% of in thi moonsoon season</h2>
     </div>
+  
 
     </div>
     </>

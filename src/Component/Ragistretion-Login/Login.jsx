@@ -1,4 +1,6 @@
 import {  useState } from "react";
+import style from "./Style.module.css"
+
 
 function Login({setlog}) {
   const [currntlogid, setlogid] = useState("");
@@ -33,33 +35,43 @@ function Login({setlog}) {
   
 
   return (
-    <form onSubmit={loghandle}>
+    <>
+    
+  
+    <form onSubmit={loghandle}
+    className={style.loginForm}>
       <input
         type="text"
         name=""
         id=""
         placeholder="enter your email/username/Phone number"
         onChange={userid}
+        className={style.logInp}
       />
       <input
-        type="text"
+        type="password"
         name=""
         id=""
         placeholder="enter your Password"
         onChange={userpass}
+        className={style.logInp}
+
       />
-      <p>
+      <p className={style.logErroInfo}>
         { submitted === true &&
         currntlogid !== "" &&
           currntpass !== "" &&
           ( userinfo.name !== currntlogid || userinfo.password !== currntpass) &&
           "user not found"}
+         
       </p>
-      <button>Login</button>
+      <button className={style.logBtn}>Login</button>
       <p>
         don't have a account <a href="ragister">Sing up</a>
       </p>
     </form>
+
+      </>
   );
 }
 
