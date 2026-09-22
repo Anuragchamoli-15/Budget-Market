@@ -1,8 +1,5 @@
 import Herocards from "../HeroCard/Herocards";
-import Card from "../Carts/TrandingDeal-2";
-// import TrandingDeal from "../TrendingDeal/TrendingDeal";
-
-
+import CardData from "../Carts/DealData";
 
 function Home(){
 
@@ -11,7 +8,6 @@ function Home(){
     
     <main>
         <Herocards></Herocards>
-
 
         <div className="dropdown">
             <label htmlFor="categary-select">select your categary</label>
@@ -24,15 +20,10 @@ function Home(){
                 <option value="grocary">grocary</option>
                <option value="kids">Kids</option>
                 <option value="toys">Toys&More</option>
-               
-              
             </select>
-
         </div>
 
-       <Card></Card>
-
-{/* <TrandingDeal ></TrandingDeal> */}
+<CardData></CardData>
 
         <section className="items section">
 

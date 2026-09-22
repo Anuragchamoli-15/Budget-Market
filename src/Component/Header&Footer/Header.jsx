@@ -1,3 +1,5 @@
+import style from "./HeaderFooter.module.css"
+
 function Header(){
     return(
         <header>

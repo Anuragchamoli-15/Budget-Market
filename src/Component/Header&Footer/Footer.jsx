@@ -1,8 +1,12 @@
+import style from "./HeaderFooter.module.css"
+
+
 function Footer(){
 return (
   <footer>
 
-    <p>copright</p>
+    <p> copy& Copright All Rigths Reserved</p>
+    <p>Desiong and Develop By Anurag Chamoli</p>
     <nav>
         <a href=""></a>
         <a href=""></a>
