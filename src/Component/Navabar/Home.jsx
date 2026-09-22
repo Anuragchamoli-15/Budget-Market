@@ -1,6 +1,7 @@
 import Herocards from "../HeroCard/Herocards";
-import CardData from "../Carts/DealData";
+import ClothsCardData from "../Carts/DealData";
 import Dropdown from "../Dropdown/Dropdown.";
+import HomeDecoreCard from "../HomeDecoreItems/HomeDecoreCard";
 
 function Home() {
   return (
@@ -8,8 +9,9 @@ function Home() {
       <main>
         <Herocards></Herocards>
         <Dropdown></Dropdown>
-        <CardData></CardData> {/* clothessection */}
-        
+        <ClothsCardData></ClothsCardData> {/* clothessection */}
+        <HomeDecoreCard></HomeDecoreCard>
+
         <section className="items section">
           <div className="home-decore"></div>
           <div className="grocary"></div>

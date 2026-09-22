@@ -14,6 +14,7 @@ function Dropdown() {
           <option value="grocary">grocary</option>
           <option value="kids">Kids</option>
           <option value="toys">Toys&More</option>
+          <option value="electronic">Electronic</option>
         </select>
       </div>
     </>

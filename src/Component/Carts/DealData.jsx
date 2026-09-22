@@ -3,7 +3,7 @@ import shirt from "../../assets/shirt.jpeg";
 import style from "./Cards.module.css"
 
 
-function CardData() {
+function ClothsCardData() {
  const Data = [
     {
         id: 1,
@@ -126,4 +126,4 @@ function CardData() {
   );
 }
 
-export default CardData;
+export default ClothsCardData;
