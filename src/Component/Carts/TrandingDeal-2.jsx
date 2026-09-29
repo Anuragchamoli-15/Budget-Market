@@ -10,12 +10,12 @@ import style from "./Cards.module.css"
                     <img src={data.image} alt="" />
                 </div>
                 <div className={style.cardTitle}>
-                    <h2>{data.name}</h2>
-                    <h3>{data.brand}</h3>
+                    <h2>{data.title}</h2>
+                    {/* <h3>{data.description}</h3> */}
                 </div>
                 <div className={style.cardPrce}>
                     <h3>{data.price}</h3>
-                    <p>{data.rating}</p>
+                    <p>{data.rating.rate}</p>
                 </div>
             </div>
 
