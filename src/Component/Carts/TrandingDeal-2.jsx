@@ -2,10 +2,11 @@ import style from "./Cards.module.css"
 
 
  function Card ({data }){
+   
     return (
         <>
-        
-            <div className={style.card}>
+        {
+            data.category !== "electronics" && data.category !=="jewelery"  && <div className={style.card}>
                 <div className={style.cardImg}>
                     <img src={data.image} alt="" />
                 </div>
@@ -18,6 +19,8 @@ import style from "./Cards.module.css"
                     <p>{data.rating.rate}</p>
                 </div>
             </div>
+        }
+           
 
         </>
 

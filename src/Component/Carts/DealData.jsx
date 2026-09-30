@@ -9,8 +9,8 @@ function ClothsCardData() {
     useEffect(()=>{
         
         fetch("https://fakestoreapi.com/products")
-        .then(res=> res.json())
-        .then(data =>setData(data) )
+        .then(res=>res.json())
+        .then(data =>setData(data))
         
     },[])
     console.log(currntData)
@@ -18,9 +18,8 @@ function ClothsCardData() {
   return (
     <>
       <div className={style.boxContainer}>
-        {currntData.map((data) => (
-          <Card key={data.id} data={data} />
-        ))}
+        { currntData.map((data) => 
+        (<Card key={data.id} data={data} />))}
       </div>
     </>
   );

@@ -3,19 +3,20 @@ import style from "../Carts/cards.module.css"
 function HomeDecore({ data }) {
   return (
     <>
-      <div className={style.card}>
+    {data.category !== "men's clothing" && data.category !== "women's clothing" && <div className={style.card}>
         <div className={style.cardImg}>
           <img src={data.image} alt="" />
         </div>
         <div className={style.cardTitle}>
-          <h2>{data.name}</h2>
-          <h3>{data.category}</h3>
+          <h2>{data.title}</h2>
+          {/* <h3>{data.category}</h3> */}
         </div>
         <div className={style.cardPrce}>
           <h3>{data.price}</h3>
-          <p>{data.rating}</p>
+          <p>{data.rating.rate}</p>
         </div>
-      </div>
+      </div>}
+     
     </>
   );
 }
