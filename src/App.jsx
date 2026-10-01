@@ -10,7 +10,8 @@ function App() {
 
   return (
     <>
-    {log === "log"?<Home></Home> :<Login setlog = {setlog}></Login> }
+    {/* {log === "log"?<Home></Home> :<Login setlog = {setlog}></Login> } */}
+    <Home></Home>
    
     </>
   )
