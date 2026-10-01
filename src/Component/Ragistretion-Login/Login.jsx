@@ -1,13 +1,17 @@
 import {  useState } from "react";
 import style from "./Style.module.css"
-
+import { useNavigate } from "react-router-dom";
 
 function Login({setlog}) {
   const [currntlogid, setlogid] = useState("");
   const [currntpass, setpass] = useState("");
   
+const navigate = useNavigate()
+
   const userid = (e) => {
-    setlogid(e.target.value);
+    let name = (e.target.value).trim()
+    // let name = e.target.value
+    setlogid(name);
   };
   const userpass = (e) => {
     setpass(e.target.value);
@@ -27,6 +31,7 @@ function Login({setlog}) {
 
     if(currntlogid === userinfo.name && currntpass === userinfo.password){
       setlog("log")
+      navigate("/")
     }
 
     setSubmitted(true)
@@ -65,7 +70,7 @@ function Login({setlog}) {
           "user not found"}
          
       </p>
-      <button className={style.logBtn}>Login</button>
+      <button className={style.logBtn}>Login </button>
       <p>
         don't have a account <a href="ragister">Sing up</a>
       </p>

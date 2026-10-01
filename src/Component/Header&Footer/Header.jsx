@@ -1,4 +1,5 @@
 import style from "./HeaderFooter.module.css";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -11,10 +12,10 @@ function Header() {
       </div>
 
       <div className={style.headLinks}>
-        <a href="home">Home</a>
-        <a href="cart">Basket</a>
-        <a href="favroit">WishList</a>
-        <a href="profile">Profile</a>
+        <Link to="/">Home</Link>
+        <Link to="basket">Basket</Link>
+        <Link to ="wishList">WishList</Link>
+        <Link to ="profile">Profile</Link>
       </div>
     </nav>
   </div>

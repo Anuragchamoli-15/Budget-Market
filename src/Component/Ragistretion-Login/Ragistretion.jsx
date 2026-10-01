@@ -61,7 +61,7 @@ function Ragistretion() {
         <input type="password" name="" id="" placeholder="Enter your Paaword" onChange={Paas} className={style.ragisInp}/>
         <p className={style.ragiInfo}>{currntpass.length <= 8 ? "password shoud be 8 charecters":null} </p>
         <button type="submit">Submit</button>
-        <p>Have a account <a href="/">Login</a></p>
+        <p>Have a account <a href="login">Login</a></p>
     </form>
   );
 }

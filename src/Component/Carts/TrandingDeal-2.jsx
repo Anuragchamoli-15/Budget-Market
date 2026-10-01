@@ -1,17 +1,26 @@
 import style from "./Cards.module.css"
+import { useState } from "react";
+import Basket from "../Navabar/Basket";
 
 
- function Card ({data }){
+ function Card ({data}){
+
+    const [cartItem, setCartItem] = useState([]);
+
+    const handleclick =()=>{
+        setCartItem(data)
+    }
    
     return (
         <>
+        <Basket cartItem={cartItem}></Basket>
         {
             data.category !== "electronics" && data.category !=="jewelery"  && <div className={style.card}>
                 <div className={style.cardImg}>
                     <img src={data.image} alt="" />
                 </div>
                 <div className={style.cardTitle}>
-                    <button className={style.addCartBtn}>Add</button>
+                    <button className={style.addCartBtn} onClick={ handleclick}>Add</button>
                     <h2>{data.title}</h2>
                     {/* <h3>{data.description}</h3> */}
                 </div>
