@@ -1,24 +1,36 @@
 import style from "./style.module.css"
+import { useContext } from "react";
+import DataContext from "../Store";
 
-function Basket({cartItem}) {
-    console.log(cartItem)
-  return (
-    <>
-    {/* {cartItem? "Not Item Here": } */}
-    {/* <div className={style.cartContainer}>
-        <div className={style.cartImg}>
-          <img src={cartItem.image} alt="" />
-        </div>
-        <div className={style.cardTitle}>
-          <h2>{cartItem.title}</h2>
-          <h3>{cartItem.description}</h3>
-        </div>
-        <div className={style.cardPrce}>
-          <h3>{cartItem.price}</h3>
-          <p>{cartItem.rating.rate}</p>
-        </div>
-      </div> */}
-      {/* <h1>Hello</h1> */}
+function Basket() {
+    const {name ,currntItem} = useContext(DataContext)
+
+    
+    let newList = currntItem.filter((item,index,array)=> 
+    array.findIndex((ind) => ind.id === item.id) === index
+    )
+    return (
+      <>
+    {newList.length === 0? "Not Item Here":newList.map((item) => 
+       <div className={style.cartContainer} key={item.id}>
+         <div className={style.cartImg}>
+           <img src={item.image} alt="" />
+           <button>Remove</button>
+         </div>
+         <div className={style.cardTitle}>
+           <h2>{item.title}</h2>
+           <h3>{item.description}</h3>
+         </div>
+       <div className={style.cardPrce}>
+           <h3>Price Rs.{item.price}</h3>
+         </div>
+       </div>
+     )}
+    
+
+    
+    
+    
      
     </>
   );

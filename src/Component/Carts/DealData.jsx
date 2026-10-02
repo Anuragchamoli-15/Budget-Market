@@ -13,7 +13,7 @@ function ClothsCardData() {
         .then(data =>setData(data))
         
     },[])
-    console.log(currntData)
+    // console.log(currntData)
     
   return (
     <>
